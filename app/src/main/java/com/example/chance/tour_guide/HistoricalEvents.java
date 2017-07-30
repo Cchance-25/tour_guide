@@ -12,7 +12,7 @@ public class HistoricalEvents {
     private String URL;
 
 
-    public HistoricalEvents(String mEventDate, String mEventTitle, String mEventDetails, String URL, int mImageResourceId) {
+    public HistoricalEvents(String mEventTitle, String mEventDetails, String mEventDate, String URL, int mImageResourceId) {
         this.mEventTitle = mEventTitle;
         this.mEventDetails = mEventDetails;
         this.mEventDate = mEventDate;
@@ -36,7 +36,6 @@ public class HistoricalEvents {
     public void setURL(String URL) {
         this.URL = URL;
     }
-
 
 
     public String getmEventDate() {

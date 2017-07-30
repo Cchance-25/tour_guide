@@ -18,8 +18,6 @@ import java.util.ArrayList;
 public class ListAdapter extends ArrayAdapter<Object> {
 
 
-    private HistoricalEvents currentEvent = null;
-    private tmpClass tmpEvent = null;
 
     public ListAdapter(Context context, ArrayList<Object> objects) {
         super(context, 0, objects);
@@ -29,13 +27,13 @@ public class ListAdapter extends ArrayAdapter<Object> {
 
         View lv = convertView;
 
-        if (lv == null) {
-            lv = LayoutInflater.from(getContext()).inflate(R.layout.list_item, parent, false);
-        }
-
         if (getItem(position) instanceof HistoricalEvents) {
 
-            currentEvent = (HistoricalEvents) getItem(position);
+            if (lv == null) {
+                lv = LayoutInflater.from(getContext()).inflate(R.layout.list_item_simple_list, parent, false);
+            }
+
+            HistoricalEvents currentEvent = (HistoricalEvents) getItem(position);
 
             TextView eventTitle = (TextView) lv.findViewById(R.id.event_title);
             eventTitle.setText(currentEvent.getmEventTitle());
@@ -50,22 +48,21 @@ public class ListAdapter extends ArrayAdapter<Object> {
             ImageView eventImage = (ImageView) lv.findViewById(R.id.list_item_icon);
             eventImage.setImageResource(currentEvent.getmImageResourceId());
             return lv;
+        }
 
-        }else if (getItem(position) instanceof tmpClass) {
+        if (getItem(position) instanceof Photo) {
 
-            tmpEvent = (tmpClass) getItem(position);
+            if (lv == null) {
+                lv = LayoutInflater.from(getContext()).inflate(R.layout.list_item_photo_list, parent, false);
+            }
 
-            TextView tmp1 = (TextView) lv.findViewById(R.id.event_title);
-            tmp1.setText(tmpEvent.getTmp1());
+            Photo currentEvent = (Photo) getItem(position);
 
+            TextView thumbnailDescription = (TextView) lv.findViewById(R.id.thumbnail_description);
+            thumbnailDescription.setText(currentEvent.getmDesc());
 
-            TextView tmp2 = (TextView) lv.findViewById(R.id.event_description);
-            tmp2.setText(tmpEvent.getTmp2());
-
-            TextView tmp3 = (TextView) lv.findViewById(R.id.event_date);
-            tmp3.setText(tmpEvent.getTmp3());
-            return lv;
-
+            ImageView thumbnail = (ImageView) lv.findViewById(R.id.thumbnail);
+            thumbnail.setImageResource(currentEvent.getmImageResourceId());
         }
 
         return lv;

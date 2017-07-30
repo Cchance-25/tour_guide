@@ -15,8 +15,12 @@
             android:icon="@drawable/ic_menu_slideshow"
             android:title="Weather" />
 
-    </group>
+        <item
+            android:id="@+id/food"
+            android:icon="@drawable/ic_menu_food"
+            android:title="Food" />
 
+    </group>
 
 
 </menu>

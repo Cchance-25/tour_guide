@@ -19,15 +19,16 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".History"
-            android:parentActivityName=".MainActivity"
-            />
-        <activity android:name=".PhotoGallery"
-            android:parentActivityName=".MainActivity"
-            />
-        <activity android:name=".Weather"
-            android:parentActivityName=".MainActivity"
-            />
+        <activity
+            android:name=".History"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".PhotoGallery"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".Weather"
+            android:parentActivityName=".MainActivity" />
+        <activity android:name=".Food"></activity>
     </application>
 
 </manifest>

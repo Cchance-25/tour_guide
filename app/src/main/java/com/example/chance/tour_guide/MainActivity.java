@@ -15,6 +15,8 @@ import android.widget.Toast;
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
+    private Intent intent;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -65,8 +67,6 @@ public class MainActivity extends AppCompatActivity
         return super.onOptionsItemSelected(item);
     }
 
-    private Intent intent;
-
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
         // Handle navigation view item clicks here.
@@ -89,6 +89,12 @@ public class MainActivity extends AppCompatActivity
             case R.id.weather:
                 Toast.makeText(this, "Weather clicked", Toast.LENGTH_SHORT).show();
                 intent = new Intent(this, Weather.class);
+                startActivity(intent);
+                break;
+
+            case R.id.food:
+                Toast.makeText(this, "Food clicked", Toast.LENGTH_SHORT).show();
+                intent = new Intent(this, Food.class);
                 startActivity(intent);
                 break;
 
