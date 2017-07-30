@@ -18,7 +18,6 @@ import java.util.ArrayList;
 public class ListAdapter extends ArrayAdapter<Object> {
 
 
-
     public ListAdapter(Context context, ArrayList<Object> objects) {
         super(context, 0, objects);
     }
@@ -63,6 +62,25 @@ public class ListAdapter extends ArrayAdapter<Object> {
 
             ImageView thumbnail = (ImageView) lv.findViewById(R.id.thumbnail);
             thumbnail.setImageResource(currentEvent.getmImageResourceId());
+            return lv;
+
+        }
+
+        if (getItem(position) instanceof FoodObject) {
+
+            if (lv == null) {
+                lv = LayoutInflater.from(getContext()).inflate(R.layout.list_item_photo_list, parent, false);
+            }
+
+            FoodObject currentEvent = (FoodObject) getItem(position);
+
+            TextView thumbnailDescription = (TextView) lv.findViewById(R.id.thumbnail_description);
+            thumbnailDescription.setText(currentEvent.getmFoodName());
+
+            ImageView thumbnail = (ImageView) lv.findViewById(R.id.thumbnail);
+            thumbnail.setImageResource(currentEvent.getmFoodImageResourceId());
+            return lv;
+
         }
 
         return lv;

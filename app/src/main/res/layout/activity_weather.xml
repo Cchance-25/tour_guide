@@ -3,10 +3,11 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
         tools:context="com.example.chance.tour_guide.Weather">
 
         <ImageView
@@ -16,22 +17,10 @@
             android:src="@drawable/riyadh_sun" />
 
         <TextView
-            android:id="@+id/title_text_view"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/riyadh_sun_image_view"
-            android:layout_centerHorizontal="true"
-            android:text="Weather in Riyadh"
-            android:textSize="23sp"
-            android:textStyle="bold" />
-
-        <TextView
             android:id="@+id/weather_description_text_view"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/title_text_view"
             android:layout_marginLeft="16dp"
-            android:layout_marginTop="16dp"
             android:text="@string/weather_description"
             android:textSize="26sp" />
 
@@ -39,12 +28,11 @@
             android:id="@+id/weather_info_button_view"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/weather_description_text_view"
             android:layout_marginLeft="16dp"
             android:text="@string/more"
             android:textStyle="italic|bold" />
 
 
-    </RelativeLayout>
+    </LinearLayout>
 
 </ScrollView>

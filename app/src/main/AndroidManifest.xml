@@ -28,7 +28,9 @@
         <activity
             android:name=".Weather"
             android:parentActivityName=".MainActivity" />
-        <activity android:name=".Food"></activity>
+        <activity
+            android:name=".Food"
+            android:parentActivityName=".MainActivity"></activity>
     </application>
 
 </manifest>
