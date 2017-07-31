@@ -10,7 +10,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -74,26 +73,22 @@ public class MainActivity extends AppCompatActivity
 
         switch (id) {
             case R.id.history:
-                Toast.makeText(this, "History clicked", Toast.LENGTH_SHORT).show();
                 intent = new Intent(this, History.class);
                 startActivity(intent);
 
                 break;
 
             case R.id.photo_gallery:
-                Toast.makeText(this, "Photo Gallery clicked", Toast.LENGTH_SHORT).show();
                 intent = new Intent(this, PhotoGallery.class);
                 startActivity(intent);
                 break;
 
             case R.id.weather:
-                Toast.makeText(this, "Weather clicked", Toast.LENGTH_SHORT).show();
                 intent = new Intent(this, Weather.class);
                 startActivity(intent);
                 break;
 
             case R.id.food:
-                Toast.makeText(this, "Food clicked", Toast.LENGTH_SHORT).show();
                 intent = new Intent(this, Food.class);
                 startActivity(intent);
                 break;

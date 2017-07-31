@@ -1,11 +1,10 @@
 package com.example.chance.tour_guide;
 
-import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.view.View;
-import android.widget.Button;
+import android.widget.ListView;
+
+import java.util.ArrayList;
 
 public class Weather extends AppCompatActivity {
 
@@ -13,14 +12,16 @@ public class Weather extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_weather);
+        ArrayList<Object> list = new ArrayList<>();
+        //String cityName, String weatherStatus, int weatherIcon, double temperature
+        list.add(new WeatherObject(getString(R.string.riyadh), getString(R.string.sunny), 43, R.mipmap.ic_sunny));
+        list.add(new WeatherObject(getString(R.string.hafr), getString(R.string.sunny), 46, R.mipmap.ic_sunny));
+        list.add(new WeatherObject(getString(R.string.khamis), getString(R.string.partly_cloudy), 29, R.mipmap.ic_cloudy));
 
-        Button btn = (Button) findViewById(R.id.weather_info_button_view);
-        btn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.timeanddate.com/weather/saudi-arabia"));
-                startActivity(intent);
-            }
-        });
+        ListAdapter adapter = new ListAdapter(this, list);
+        ListView rootView = (ListView) findViewById(R.id.weather_list_view);
+        rootView.setAdapter(adapter);
+
+
     }
 }

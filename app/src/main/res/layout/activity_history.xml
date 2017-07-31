@@ -15,13 +15,13 @@
         android:layout_marginTop="10dp"
         android:paddingLeft="10dp"
         android:paddingRight="10dp"
-        android:text="Here, find a list of some historical events took place in Saudi Arabia" />
+        android:text="@string/historical_events_in_saudi_text_view" />
 
 
     <ListView
         android:id="@+id/histoical_events_list_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"></ListView>
+        android:layout_marginTop="16dp" />
 
 </LinearLayout>

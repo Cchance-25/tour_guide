@@ -3,7 +3,7 @@
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="action_settings">Settings</string>
-    <string name="weather_description">Saudi Arabia has a desert climate, with very high temperatures during the day and high at night in summer. In wintwer, Saudi Arabua - Riyadh gets low temperatures, 9 in average. For more, click the button bellow.</string>
+    <string name="weather_description">Saudi Arabia has a desert climate, with very high temperatures reaching 48C during the day and high at night in summer. In wintwer, Saudi Arabua - Riyadh gets low temperatures, 9 in average.</string>
     <string name="more">More...</string>
     <string name="first_event_title">The First Saudi State</string>
     <string name="first_event_desc">In early 1800\'s a Muslim scholar decided to move back to where now Saudi Arabia is and start the Muslim tradition and churches again. This created the first Saudi State because everyone had come back to the Muslim way.</string>
@@ -24,4 +24,12 @@
     <string name="mofatah">Mofatah</string>
     <string name="areka">Arekah</string>
     <string name="kabsa">Kabsa</string>
+    <string name="saudi_arabia_tour_guide">Saudi Arabia Tour Guide</string>
+    <string name="my_email">almalhawi.nasser@gmail.com</string>
+    <string name="historical_events_in_saudi_text_view">Here, find a list of some historical events took place in Saudi Arabia</string>
+    <string name="riyadh">Riyadh</string>
+    <string name="sunny">Sunny</string>
+    <string name="hafr">Hafar Al-Batin</string>
+    <string name="partly_cloudy">Partly cloudy</string>
+    <string name="khamis">Khamis Mushait</string>
 </resources>

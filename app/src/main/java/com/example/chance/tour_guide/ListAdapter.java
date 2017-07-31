@@ -83,6 +83,30 @@ public class ListAdapter extends ArrayAdapter<Object> {
 
         }
 
+        if (getItem(position) instanceof WeatherObject) {
+
+            if (lv == null) {
+                lv = LayoutInflater.from(getContext()).inflate(R.layout.weather_list_item, parent, false);
+            }
+
+            WeatherObject currentEvent = (WeatherObject) getItem(position);
+
+            TextView cityName = (TextView) lv.findViewById(R.id.city_name);
+            cityName.setText(currentEvent.getCityName());
+
+            TextView weather_status = (TextView) lv.findViewById(R.id.weather_status);
+            weather_status.setText(currentEvent.getWeatherStatus());
+
+            TextView temperature = (TextView) lv.findViewById(R.id.temperature);
+            temperature.setText(String.valueOf(currentEvent.getTemperature()));
+
+
+            ImageView thumbnail = (ImageView) lv.findViewById(R.id.weather_icon);
+            thumbnail.setImageResource(currentEvent.getWeatherIcon());
+            return lv;
+
+        }
+
         return lv;
     }
 }
